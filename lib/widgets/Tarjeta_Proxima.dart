@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-class UpcomingCard extends StatelessWidget {
-  const UpcomingCard({
+class TarjetaProxima extends StatelessWidget {
+  const TarjetaProxima({
     Key? key,
   }) : super(key: key);
 
@@ -13,7 +13,7 @@ class UpcomingCard extends StatelessWidget {
       height: 150,
       padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 20),
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor.withOpacity(0.8),
+        color: Colors.purple,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -23,7 +23,7 @@ class UpcomingCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
               'assets/doctor_2.jpg',
-              width: 45,
+              width: 50,
               fit: BoxFit.cover,
             ),
           ),
@@ -32,7 +32,7 @@ class UpcomingCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Dr. Ruben Dorwart",
+                "Dra. Joseline Moreno",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class UpcomingCard extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(
-                "Dental Specialist",
+                "Doctora Especialista",
                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
                       color: Colors.white70,
                     ),
@@ -65,7 +65,7 @@ class UpcomingCard extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(left: 6, right: 14),
                       child: Text(
-                        "Today",
+                        "Hoy",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),

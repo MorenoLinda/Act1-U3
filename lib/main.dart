@@ -1,5 +1,5 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:ecommerce/pages/home_page.dart';
+import 'package:moreno/paginas/pagina_inicio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,12 +7,12 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(DevicePreview(
     enabled: !kReleaseMode,
-    builder: (context) => const MyApp(),
+    builder: (context) => const VeterinariaApp(),
   ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class VeterinariaApp extends StatelessWidget {
+  const VeterinariaApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
-      title: 'health app',
+      title: 'Veterinaria app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorSchemeSeed: const Color(0xff5a73d8),
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const PaginaInicio(),
     );
   }
 }

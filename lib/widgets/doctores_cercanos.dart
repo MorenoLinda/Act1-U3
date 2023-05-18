@@ -1,14 +1,14 @@
-import 'package:ecommerce/models/doctor_model.dart';
+import 'package:moreno/modelos/doctor_modelo.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-class NearbyDoctors extends StatelessWidget {
-  const NearbyDoctors({Key? key}) : super(key: key);
+class DoctoresCercanos extends StatelessWidget {
+  const DoctoresCercanos({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(nearbyDoctors.length, (index) {
+      children: List.generate(medicosCercanos.length, (index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 18),
           child: Row(
@@ -19,7 +19,7 @@ class NearbyDoctors extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: AssetImage(nearbyDoctors[index].profile),
+                    image: AssetImage(medicosCercanos[index].perfil),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -29,12 +29,12 @@ class NearbyDoctors extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr. ${nearbyDoctors[index].name}",
+                    "Dr. ${medicosCercanos[index].nombre}",
                     style: const TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
-                  const Text("General practitioner"),
+                  Text(" ${medicosCercanos[index].posicion}"),
                   const SizedBox(height: 16),
                   Row(
                     children: [
@@ -50,7 +50,7 @@ class NearbyDoctors extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      const Text("195 Reviews")
+                      Text(" ${medicosCercanos[index].totalRevisiones}"),
                     ],
                   )
                 ],

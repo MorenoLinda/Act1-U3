@@ -1,11 +1,11 @@
-import 'package:ecommerce/widgets/health_needs.dart';
-import 'package:ecommerce/widgets/nearby_doctors.dart';
-import 'package:ecommerce/widgets/upcoming_card.dart';
+import 'package:moreno/widgets/necesidades_salud.dart';
+import 'package:moreno/widgets/doctores_cercanos.dart';
+import 'package:moreno/widgets/Tarjeta_Proxima.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class PaginaInicio extends StatelessWidget {
+  const PaginaInicio({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,9 @@ class HomePage extends StatelessWidget {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Hi, Jane"),
+            const Text("Hola, Linda"),
             Text(
-              "How are you feeling today?",
+              "¿Como se siente tu mascota hoy?",
               style: Theme.of(context).textTheme.caption,
             ),
           ],
@@ -24,7 +24,10 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Ionicons.notifications_outline),
+            icon: const Icon(
+              Ionicons.notifications,
+              color: Colors.grey,
+            ),
           ),
           IconButton(
             onPressed: () {},
@@ -36,21 +39,21 @@ class HomePage extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(14),
         children: [
-          const UpcomingCard(),
+          const TarjetaProxima(),
           const SizedBox(height: 20),
           Text(
-            "Health Needs",
+            "Necesidades de salud",
             style: Theme.of(context).textTheme.headline6,
           ),
           const SizedBox(height: 15),
-          const HealthNeeds(),
+          const NecesidadesSalud(),
           const SizedBox(height: 25),
           Text(
-            "Nearby Doctors",
+            "Doctores Cercanos",
             style: Theme.of(context).textTheme.headline6,
           ),
           const SizedBox(height: 15),
-          const NearbyDoctors(),
+          const DoctoresCercanos(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -60,7 +63,10 @@ class HomePage extends StatelessWidget {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Ionicons.home_outline),
-            activeIcon: Icon(Ionicons.home),
+            activeIcon: Icon(
+              Ionicons.home,
+              color: Colors.purple,
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(

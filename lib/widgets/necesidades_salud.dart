@@ -1,16 +1,16 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class HealthNeeds extends StatelessWidget {
-  const HealthNeeds({Key? key}) : super(key: key);
+class NecesidadesSalud extends StatelessWidget {
+  const NecesidadesSalud({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List<CustomIcon> customIcons = [
-      CustomIcon(name: "Appointment", icon: 'assets/appointment.png'),
-      CustomIcon(name: "Hospital", icon: 'assets/hospital.png'),
-      CustomIcon(name: "Covid-19", icon: 'assets/virus.png'),
-      CustomIcon(name: "More", icon: 'assets/more.png'),
+      CustomIcon(nombre: "Citas", icono: 'assets/appointment.png'),
+      CustomIcon(nombre: "Veterinarias", icono: 'assets/hospital.png'),
+      CustomIcon(nombre: "Enfermedades", icono: 'assets/virus.png'),
+      CustomIcon(nombre: "Ver más", icono: 'assets/more.png'),
     ];
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,11 +29,11 @@ class HealthNeeds extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: Image.asset(
-                customIcons[index].icon,
+                customIcons[index].icono,
               ),
             ),
             const SizedBox(height: 6),
-            Text(customIcons[index].name)
+            Text(customIcons[index].nombre)
           ],
         );
       }),
@@ -42,10 +42,10 @@ class HealthNeeds extends StatelessWidget {
 }
 
 class CustomIcon {
-  final String name;
-  final String icon;
+  final String nombre;
+  final String icono;
   CustomIcon({
-    required this.name,
-    required this.icon,
+    required this.nombre,
+    required this.icono,
   });
 }
